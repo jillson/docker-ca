@@ -5,7 +5,7 @@ RUN mkdir -p /ca/out
 RUN yum install openssl -y
 
 WORKDIR /ca
-RUN echo 01 > serial
+RUN echo 01 > ca.srl
 
 COPY openssl.cnf .
 ENV OPENSSL_CONF openssl.cnf
